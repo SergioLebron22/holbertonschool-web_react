@@ -35,7 +35,7 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
     return `${firstName.substring(0,1)}. ${lastName}`;
 }
 
-console.log(printTeacher(director1.firstName, director1.lastName))
+console.log(printTeacher(teacher3.firstName, teacher3.lastName))
   
 console.log(director1);
 
