@@ -5,13 +5,33 @@ interface Student {
     location: string;
 }
 
-let student1: Student;
-let student2: Student;
+let student1: Student = {
+    firstName: "Luffy",
+    lastName: 'Monkey D',
+    age: 19,
+    location: "Elbaf"
+};
+
+let student2: Student = {
+    firstName: 'Roronoa',
+    lastName: 'Zoro',
+    age: 19,
+    location: 'Elbaf'
+};
 
 let studentList: Student[] = [student1, student2]
 
 const table = document.createElement('table');
-const tableBody = document.createElement('tbody');
+
+
+const headerRow = document.createElement('tr');
+const headers = ['First Name', 'Location'];
+headers.forEach(headerText => {
+    const header = document.createElement('th');
+    header.textContent = headerText;
+    headerRow.appendChild(header);
+});
+table.appendChild(headerRow);
 
 studentList.forEach(student => {
     const row = document.createElement('tr');
@@ -24,9 +44,8 @@ studentList.forEach(student => {
     locationCell.textContent = student.location;
     row.appendChild(locationCell);
 
-    tableBody.appendChild(row);
+    table.appendChild(row);
 });
 
-table.appendChild(tableBody);
 
-document.body.appendChild(table);
+document.getElementById('table-container').appendChild(table);
