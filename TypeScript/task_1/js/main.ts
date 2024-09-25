@@ -63,6 +63,10 @@ class StudentClass {
     }
 }
 
+let s = new StudentClass("sage", "lebron")
+console.log(s.workOnHomework());
+console.log(s.displatName());
+
 console.log(printTeacher(teacher3.firstName, teacher3.lastName))
   
 console.log(director1);
