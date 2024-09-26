@@ -1,7 +1,6 @@
-/// <refrence path="../crud.d.ts"/>
+/// <reference path="./crud.d.ts"/>
 import {RowID, RowElement} from './interface';
-import * as CRUD from './crud';
-
+let CRUD = require("./crud");
 const row: RowElement = {
     firstName: "Guillaume",
     lastName: "Salva"
